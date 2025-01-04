@@ -41,8 +41,10 @@ function Home() {
         welcome to my <i>tiny</i> section of the internet!
         <br />
         <br />
+        i'm currently a 3rd year software engineering student studying at mcmaster university, hamilton, where I spend my days uncovering new technologies and creating the ideal schedule.
         <br />
         <br />
+        you can reach me at nguyev74@mcmaster.ca anytime
         <br />
         (or anywhere here)
         <br />
