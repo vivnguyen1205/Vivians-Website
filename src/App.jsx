@@ -1,35 +1,151 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, NavLink, Routes, Route } from "react-router-dom";
+import { useContext, useState } from 'react';
+import { ThemeContext } from "./Theme.jsx";
+import Home from './pages/home.jsx';
+import ToggleTheme from './components/logo.jsx';
+import Footer from './components/footer.jsx';
+import Project from './pages/projects.jsx';
+import Design from './pages/design.jsx';
+import Manifesto from './pages/manifesto.jsx';
+import DirectU from './pages/directu.jsx';
+import BrewCareer from './pages/brewcareer.jsx';
+import About from './pages/about.jsx';
+import NavBar from './components/nav.jsx';
+import Scroll from './components/scroll.jsx';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+function PageRouter(){
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={`App ${theme}`}>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      />
+      <div className='flex-container' id='border'/>
+      <div className='flex-container' id='border'>
+        <div className='flex-container' id='inner'/>
+        <div className='flex-container' id='inner'>
+          <div className='flex-container' id='nav-bar'>
+            <div className='flex-container' id='logo'> 
+              <ToggleTheme/>
+            </div>
+              <NavBar/>
+          </div>
+
+          <div className='flex-container' id='content' style={{ overflowY: 'scroll' }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Project />} />
+              <Route path="/design" element={<Design />} />
+              <Route path="/manifesto" element={<Manifesto />} />
+            </Routes>
+            <div id='footer'>
+              <Footer/>
+            </div>
+
+            </div>
+        </div>
+        <div className='flex-container' id='inner'/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='flex-container' id='border'/>
+      <Scroll showScrollUp="scroll" scrollUp={() => window.scrollTo(0, 0)} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    );
+}
+
+function ProjectRouter(){
+  const { theme } = useContext(ThemeContext);
+
+  return (
+      <div className={`App ${theme}`}>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      />
+      <div className='flex-container' id='border'/>
+      <div className='flex-container' id='border'>
+        <div className='flex-container' id='inner'/>
+        <div className='flex-container' id='inner'>
+          <div className='flex-container' id='nav-bar'>
+            <div className='flex-container' id='logo'> 
+              <ToggleTheme/>
+            </div>
+            <NavBar/>
+          </div>
+          <div className='flex-container' id='content' style={{ overflowY: 'scroll' }}>
+              <Routes>
+                <Route path="/" element={<Project />} />
+                <Route path="/directu" element={<DirectU />} />
+              </Routes>
+            </div>
+        </div>
+        <div className='flex-container' id='inner'/>
+      </div>
+      <div className='flex-container' id='border'/>
+      </div>
+    );
+
+}
+
+
+function DesignRouter(){
+  const { theme } = useContext(ThemeContext);
+
+  return (
+      <div className={`App ${theme}`}>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      />
+      <div className='flex-container' id='border'/>
+      <div className='flex-container' id='border'>
+        <div className='flex-container' id='inner'/>
+        <div className='flex-container' id='inner'>
+          <div className='flex-container' id='nav-bar'>
+            <div className='flex-container' id='logo'> 
+              <ToggleTheme/>
+            </div>
+            <NavBar/>
+          </div>
+          <div className='flex-container' id='content' style={{ overflowY: 'scroll' }}>
+              <Routes>
+                <Route path="/" element={<Design />} />
+                <Route path="/brewcareer" element={<BrewCareer />} />
+              </Routes>
+
+            </div>
+        </div>
+        <div className='flex-container' id='inner'/>
+      </div>
+      <div className='flex-container' id='border'/>
+      <Scroll showScrollUp="scroll" scrollUp={() => window.scrollTo(0, 0)} />
+      </div>
+    );
+
+}
+
+function App() {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <BrowserRouter>
+      <div className={`App ${theme}`}>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      />
+      <Routes>
+        <Route path="/*" element={<PageRouter />} />
+        <Route path="/projects/*" element={<ProjectRouter />}/>
+        <Route path="/design/*" element={<DesignRouter />}/>
+      </Routes>
+      </div>
+      
+    </BrowserRouter>
+    );
 }
 
 export default App
