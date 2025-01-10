@@ -16,13 +16,13 @@ function Footer() {
         title="github"
       ></a>
       <a
-        href="https://www.instagram.com/57cathe/"
+        href=""
         target="_blank"
         className="fa fa-instagram fa-2x"
         title="insta"
       ></a>
       <a
-        href="https://www.bento.me/cath"
+        href=""
         target="_blank"
         className="fa fa-folder fa-2x"
         title="bento"

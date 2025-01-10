@@ -5,48 +5,51 @@ import '../index.css'
 function Project(){
 
     const cardDataSets = [
+      {
+        id: 'SwiftApps',
+        cover: '/swiftapps.png',
+        subtitle: 'SwiftApps',
+        desc: 'faster applications. fewer errors. more offers.',
+        tags: ['python','flask', 'Selenium','Google Vision AI', 'Cohere'],
+        link: 'https://github.com/vivnguyen1205/SwiftApps',
+      },
         {
-            id: 'directu',
+            id: 'FreeMario',
             cover: '/directu.png',
-            subtitle: 'directu',
+            subtitle: 'FreeMario',
             desc: 'your degree without the hassle, won 1st for best use of cohere @ hack the north 2023 🏆 ',
-            tags: ['react', 'python','cohere','mongoDB'],
-          },
-          // {
-          //   id: 'kubzco',
-          //   cover: '/kubz.png',
-          //   subtitle: 'kubzco design',
-          //   desc: 'redesigned ecommerce front for a local toronto-owned business',
-          //   tags: ['react','javascript','nodejs', 'stripe'],
-          // },
-          {
-            id: 'linkedout',
-            cover: '/linkedout.png',
-            subtitle: 'linkedout',
-            desc: 'an any mans stepping stone to efficient networking',
-            tags: ['react','typescript','python', 'cohere', 'mongoDB'],
-            link: 'https://github.com/wonyuan/linkedout',
+            tags: ['java', 'Gradle','OpenGL','GLFW', 'imGui'],
+            link: 'https://github.com/vivnguyen1205/FreeLuigi'
           },
           {
-            id: '101districts',
+            id: 'Employee-Management-System',
+            cover: '/kubz.png',
+            subtitle: 'Employee-Management-System',
+            desc: 'redesigned ecommerce front for a local toronto-owned business',
+            tags: ['react','java','SpringBoot API'],
+            link: 'https://github.com/vivnguyen1205/Employee-Management-System'
+          },
+          
+          {
+            id: 'Media Bias Analyzer',
             cover: '/101districts.png',
-            subtitle: '101districts',
+            subtitle: 'Media Bias Analyzer',
             desc: 'helping you fast track all the bad parts of vacationing',
-            tags: ['react','typescript','gemini-ai', 'firebase'],
-            link: 'https://101districts.vercel.app'
+            tags: ['python','openAI'],
+            link: 'https://github.com/vivnguyen1205/MediaBiasAnalyzer'
           },
           {
-            id: 'monster royale',
+            id: 'Maze Runner Game',
             cover: '/msw.jpeg',
-            subtitle: 'maple tactics',
+            subtitle: 'Maze Runner Game',
             desc: 'a tft inspired auto chess battler game with a maplestory twist, available on maplestory worlds',
             tags: ['lua','msw','game dev'],
             link: '',
           },
           {
-            id: 'reverie',
+            id: 'Drone Rescue Mission Virtual Game',
             cover: '/reverie.png',
-            subtitle: 'reverie',
+            subtitle: 'Drone Rescue Mission Virtual Game',
             desc: 'workspace, streamlining all your study needs',
             tags: ['web dev', 'productivity', 'react'],
             link: 'https://reverie-pomo.vercel.app',

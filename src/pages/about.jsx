@@ -15,21 +15,21 @@ function About(){
 
     const previousInternships = [
       {
-        company: 'Euna Solutions',
+        company: 'Gene Solutions',
         role: 'Software Developer Intern',
         desc: 'etc',
       },
       {
-        company: 'Kubzco Design ',
-        role: 'Web Developer Volunteer',
+        company: 'Linamar - Camtac',
+        role: 'Engineering Intern',
         desc: 'etc',
       },
     ];
 
     const currentInternships = [
       {
-        company: 'McMaster Eng. Society',
-        role: 'Frontend Developer',
+        company: 'McMaster iBioMed Society',
+        role: 'Web Developer',
         desc: 'etc',
       },
       {
@@ -41,9 +41,7 @@ function About(){
   
 
     const morning = [
-        '/gonghang.jpeg',
-        '/richmond.png',
-        '/haeundae.jpeg',
+        '/abt-img.jpg'
       ];
 
       const night = [
